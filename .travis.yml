@@ -1,0 +1,13 @@
+language: bash
+
+sudo: required
+
+services:
+  - docker
+
+before_script:
+    - chmod +x ./ci.sh
+    - if [ $DOCKER_EMAIL ] && [ $DOCKER_USERNAME ] && [ $DOCKER_PASSWORD ]; then docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"; export DOCKER_PUSH=true ; fi
+
+script:
+    - ./ci.sh
