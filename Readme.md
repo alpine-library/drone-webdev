@@ -1,5 +1,7 @@
 #WebDev Dockerfile
 
+V1.0
+
 Just a small image powered with alpine linux optimized for drone :)
 
 Inside :
