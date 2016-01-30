@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-name='webdev'
+name='drone-webdev'
 namespace='alpinelib'
 
 declare -A aliases
