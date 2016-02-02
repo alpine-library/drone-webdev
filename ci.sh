@@ -27,7 +27,7 @@ for version in "${versions[@]}"; do
 
   cd $version
   echo "build docker image $version"
-  ID=$(docker build .  | tail -1 | sed 's/.*Successfully built \(.*\)$/\1/')
+  ID=$(docker build --pull=true .  | tail -1 | sed 's/.*Successfully built \(.*\)$/\1/')
   cd ..
 
 	for va in "${versionAliases[@]}"; do
